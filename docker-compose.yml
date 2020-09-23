@@ -4,8 +4,8 @@ version: '3.1'
 # Setup
 services:
 
-  # WordPress
-  wordpress:
+  # PHP
+  php:
     depends_on:
       - db
     image: phpdocker
