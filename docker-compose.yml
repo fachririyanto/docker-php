@@ -8,11 +8,10 @@ services:
   php:
     depends_on:
       - db
-    image: phpdocker
+    image: docker-php
     restart: always
     ports:
-      - 80:80
-      - 3080:80
+      - 5000:80
     volumes:
       - ./development:/var/www/html
 
@@ -23,7 +22,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - 8080:80
+      - 5050:80
     environment:
       PMA_HOST: db
 
