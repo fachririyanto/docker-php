@@ -22,6 +22,7 @@ RUN apt-get update && apt-get install -y apache2
 RUN apt-get install -y php-pear libapache2-mod-php8.0
 RUN apt-get install -y php8.0-common php8.0-cli
 RUN apt-get install -y php8.0-bz2 php8.0-zip php8.0-curl php8.0-gd php8.0-mysql php8.0-xml php8.0-dev php8.0-sqlite php8.0-mbstring php8.0-bcmath php8.0-imagick
+RUN apt-get install -y php-gd php-zip
 RUN php -v
 RUN php -m
 
@@ -51,6 +52,7 @@ CMD ["/usr/sbin/apache2ctl", "-DFOREGROUND"]
 
 # Purge old PHP
 RUN apt-get update
+RUN apt-get -y purge '^php5.6.*'
 RUN apt-get -y purge '^php7.4.*'
 RUN php -v
 
