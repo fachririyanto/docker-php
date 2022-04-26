@@ -1,8 +1,8 @@
 # Setup PHP Dev Environment with Docker
-Hello guys, this is my Docker setup for running php development. You can use it if you want :)
+Hello guys, this is my Docker setup for running PHP development. You can use it if you want :)
 
 Fyi, this setup installed:
-01. PHP 8.0
+01. PHP 8.x (Available 5.6)
 02. GIT
 03. RUBY
 04. SASS Compass
@@ -23,7 +23,7 @@ Fyi, this setup installed:
 04. run ```docker-compose up -d```
 05. run ```docker exec -it docker-php_php_1 bash``` to enter Container console
 
-After that, open http://localhost:5050 for PHPMyAdmin (username: root, password: password) and http://localhost:5000 for your PHP installation.
+After that, open http://localhost:8080 for PHPMyAdmin (username: root, password: password) and http://localhost for your PHP installation.
 
 You can add / edit your PHP file inside "development" folder or you can create a new folder for your new project. I already created a folder called "test" for testing. You can run it on http://localhost/test
 
