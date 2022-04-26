@@ -1,2 +1,4 @@
 <?php
-echo "Your are running PHP with Docker.";
+
+// print PHP Info
+phpinfo();
