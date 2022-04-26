@@ -1,5 +1,5 @@
 # Version
-version: '3.1'
+version: '3.4'
 
 # Setup
 services:
@@ -11,7 +11,7 @@ services:
     image: docker-php
     restart: always
     ports:
-      - 5000:80
+      - 80:80
     volumes:
       - ./development:/var/www/html
 
@@ -22,7 +22,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - 5050:80
+      - 8080:80
     environment:
       PMA_HOST: db
 
@@ -40,4 +40,3 @@ services:
 # Volumes
 volumes:
   wordpress_db:
-  wordpress_uploads:
